@@ -87,8 +87,26 @@ a.filled-button:hover {
     font-weight: 400;
     color: #1e1e1e;
     margin-bottom: 15px;
+    margin-top: 3em;
 }
-
+.row.row_1 {
+    margin-bottom: 4em;
+}
+.header_content{
+margin: 10px;
+}
+#section {
+    width: 500px;
+    height: auto;
+    word-wrap: break-word;
+  }
+  .cost_effective{
+      margin-top: -2.8px;
+  }
+  .moretext {
+    display: none;
+  }
+  
 .page-heading {
     padding: 210px 0px 130px 0px;
     text-align: center;
@@ -309,6 +327,26 @@ header .navbar {
     position: absolute;
     right: 30px;
     top: 20px;
+}
+.main-section{
+	padding: 15px;
+	background:#f1f1f1;
+}
+.custom-file-control::after {
+  content: "Choose file...";
+}
+.custom-file-control::before {
+  content: "Browse";
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .navbar .navbar-toggler-icon:after {
