@@ -79,15 +79,15 @@ a.filled-button:hover {
 .section-heading {
     text-align: center;
     margin-bottom: 60px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
 }
 
 .section-heading h2 {
     font-size: 28px;
     font-weight: 400;
     color: #1e1e1e;
-    margin-bottom: 15px;
-    margin-top: 3em;
+    margin-bottom: -28px;
+    /* margin-top: 3em; */
 }
 .row.row_1 {
     margin-bottom: 4em;
@@ -216,7 +216,7 @@ header {
     position: absolute;
     z-index: 99999;
     width: 100%;
-    height: 80px;
+    height: 69px;
     background-color: #cd367c !important;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
@@ -225,11 +225,11 @@ header {
 }
 
 header .navbar {
-    padding: 17px 0px;
+    padding: 9px 0px;
 }
 
 .background-header .navbar {
-    padding: 17px 0px;
+    padding: 9px 0px;
 }
 
 .background-header {
@@ -273,8 +273,8 @@ header .navbar {
 }
 
 .navbar-brand img {
-    margin-left: -25px;
-    margin-top: -20px;
+    margin-left: -63px;
+    margin-top: -5px;
 }
 
 .navbar .navbar-brand h2 em {
@@ -310,8 +310,8 @@ header .navbar {
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
     color: #fff;
-    padding-bottom: 25px;
-    border-bottom: 3px solid #f33f3f;
+    padding-bottom: 21px;
+    border-bottom: 4px solid #ffff;
 }
 
 .navbar .navbar-toggler-icon {
@@ -356,14 +356,19 @@ input[type=number] {
     line-height: 26px;
     font-family: 'FontAwesome';
 }
-
-
+/* logo */
+@media (max-width: 958px) {
+.navbar-brand img {
+    margin-left: -26px;
+    margin-top: -25px;
+}
+}
 /* Banner Style */
 
 .banner {
     position: relative;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 69px;
 }
 
 .banner-item-01 {
@@ -581,6 +586,7 @@ input[type=number] {
 .best-features img {
     width: 100%;
     overflow: hidden;
+    margin-top: 40px;
 }
 
 .best-features h4 {
@@ -630,17 +636,9 @@ input[type=number] {
 .best-features .filled-button {
     margin-top: 20px;
 }
-
-.services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.36);
+.section_head{
+    margin-top: 1em;
 }
-
 .banner-item-01::before {
     content: '';
     position: absolute;
@@ -902,6 +900,7 @@ footer .inner-content p a {
 .services .section-heading h2 {
     color: #fff;
     font-weight: bold;
+    margin-top: 27px;
 }
 
 .service-item {
@@ -933,7 +932,8 @@ footer .inner-content p a {
 
 .service-item .down-content h4 {
     font-size: 17px;
-    color: #1a6692;
+    color: #fff;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -969,8 +969,9 @@ footer .inner-content p a {
 /* Clients */
 
 .happy-clients {
-    margin-top: -4em;
-    margin-bottom: -6em;
+    margin-top: -99px;
+    margin-bottom: -99px;
+    background-color: #00000080;
 }
 
 .happy-clients .client-item img {
