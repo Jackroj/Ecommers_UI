@@ -252,6 +252,10 @@ header .navbar {
     color: #000 !important;
 }
 
+.moreless-button {
+    cursor: pointer;
+}
+
 .background-header .navbar-nav .nav-link:hover,
 .background-header .navbar-nav .active>.nav-link,
 .background-header .navbar-nav .nav-link.active,
