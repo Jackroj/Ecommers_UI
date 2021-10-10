@@ -11,7 +11,7 @@
     $subject="hello";
     
     
-    $mail_header =  "From:".$name."<".$email.">\r\n"
+    $mail_header =  "From:".$name."<".$email.">\r\n";
 
     $recipient = "devapraveen10@gmail.com";
     // mail(to,subject,message,headers,parameters);
