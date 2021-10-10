@@ -1,6 +1,6 @@
 <?php
-    define('EMAIL','dev.webtoall@outlook.com');
-    define('PASS','')
+    define('EMAIL','devapraveen10@gmail.com');
+    define('PASS','Devapraveen@08')
 
 
 
