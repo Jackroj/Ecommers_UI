@@ -38,14 +38,14 @@
     <header class="">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"> <img src="assets/images/jiovio_logo_update.png" style="width: 32%;height: auto;" alt=""> </a>
+                <a class="navbar-brand" href="index.php"> <img src="assets/images/jiovio_logo_update.png" style="width: 32%;height: auto;" alt=""> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home
+                            <a class="nav-link" href="index.php">Home
                       <span class="sr-only">(current)</span>
                     </a>
                         </li>
@@ -65,7 +65,7 @@
 
                         <li class="nav-item"><a class="nav-link" href="#">Checkout</a></li>
 
-                        <li class="nav-item active"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -97,7 +97,46 @@
                 </div>
             </div>  
             <hr>
-            <form class="container" id="needs-validation" action="mail.php" method="POST">
+            <?php
+                if(isset($_POST['sendmail'])){  
+                    require 'PHPMailerAutoload.php';
+                    require 'credential.php';
+                    $mail = new PHPMailer;
+
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com;';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = EMAIL;                 // SMTP username
+$mail->Password = PASS;                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
+
+$mail->setFrom(EMAIL, 'AlloHMS');
+$mail->addAddress($_POST['email']);     // Add a recipient
+// $mail->addAddress('ellen@example.com');               // Name is optional
+$mail->addReplyTo(EMAIL);
+// $mail->addCC('cc@example.com');
+// $mail->addBCC('bcc@example.com');
+
+// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'User Details';
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->AltBody = $_POST['message'];
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+}
+                }
+            ?>
+            <form class="container" id="needs-validation" action="" method="POST">
                 <div class="row">
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="form-group">
