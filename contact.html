@@ -97,12 +97,12 @@
                 </div>
             </div>  
             <hr>
-            <form class="container" id="needs-validation" action="https://formsubmit.co/535f402c45902ddba0ae7e73e95d5b18" method="POST">
+            <form class="container" id="needs-validation" action="mail.php" method="POST">
                 <div class="row">
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label class="text-inverse" for="validationCustom01"> Name</label>
-                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                            <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="First name" required>
                             <div class="invalid-feedback">
                                 Please provide a valid Name.
                             </div>
@@ -111,7 +111,7 @@
                     <div class="col-md-6 col-sm-12 col-12">
                         <div class="form-group">
                             <label class="text-inverse" for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                             <div class="invalid-feedback">
                                 Please provide a valid Email.
                             </div>
@@ -122,7 +122,7 @@
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label class="text-inverse" for="inputnumber">Number</label>
-                            <input type="number" class="form-control" id="inputnumber" placeholder="Number" required>
+                            <input type="number" name="number" class="form-control" id="inputnumber" placeholder="Number" required>
                             <div class="invalid-feedback">
                                 Please provide a valid number.
                             </div>
@@ -131,7 +131,7 @@
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label class="text-inverse" for="product">Product</label>
-                            <select class="custom-select d-block form-control" id="product" required>
+                            <select name="product" class="custom-select d-block form-control" id="product" required>
                         <option value="">-Select-</option>
                         <option value="1">Hospital</option>
                         <option value="2">Clinic</option>
@@ -147,7 +147,7 @@
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label class="text-inverse" for="select-menu">States</label>
-                            <select class="custom-select d-block form-control" id="image" required>
+                            <select name="states" class="custom-select d-block form-control" id="image" required>
                         <option value="">Open this select menu</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -194,7 +194,7 @@
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label class="text-inverse" for="select-menu">Country</label>
-                            <select class="custom-select d-block form-control" id="image" required>
+                            <select name="country" class="custom-select d-block form-control" id="image" required>
                       <option value="">Open this select menu</option>
                       <option value="Afganistan">Afghanistan</option>
                       <option value="Albania">Albania</option>
